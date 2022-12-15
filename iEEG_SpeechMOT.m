@@ -1,5 +1,5 @@
 function targdist_fmri_final
-cd('C:\Users\Axolotl\Desktop\iEEG')
+%cd('C:\Users\Axolotl\Desktop\iEEG')
 %Screen('Preference','SkipSyncTests', 1); %keep during debugging
 %% written by Jason Rajsic, March 2011; Harrison Ritz, March 2015 (harrison.ritz@gmail.com); Bruno Mesquita, December 2022
 %% Program requires participants to track 1:4 objects while listening to speech
