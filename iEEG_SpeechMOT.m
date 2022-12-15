@@ -357,14 +357,24 @@ for block=1:nBlocks
         
         Screen('FrameRect',window,frameCol,trackRect,qFrame);
         
-        
+        % Play Sentence
         WaitSecs('UntilTime', trOnset + targetDur - (er*2));
         play(sent);
+        
+        % SEND SENT TRIGGER
+        
+        write(d,[2 0]); % IS THAT IT? NOT SURE
+        
         movOnset = Screen('Flip',window, trOnset + targetDur - er);
         
         %ti = GetSecs;
         
         %% tracking movie begin
+        
+        % SEND MOT TRIGGER
+        
+        write(d,[1 0]); % IS THAT IT? NOT SURE
+        
         %mov=tic;
         for frame = 1:frameRate*trackDur
             
@@ -585,9 +595,20 @@ for block=1:nBlocks
             %% play sentence
             WaitSecs('UntilTime', trOnset + targetDur - (er*2));
             play(sent);
+            
+            % SEND SENT TRIGGER
+        
+        write(d,[2 0]); % IS THAT IT? NOT SURE
+        
             movOnset = Screen('Flip',window, trOnset + targetDur - er);
             
             %% movie
+            
+            % SEND MOT TRIGGER
+        
+        write(d,[1 0]); % IS THAT IT? NOT SURE
+        
+        
             for frame = 1:frameRate*trackDur
                 
                 Screen('FillRect',window,backgroundColour);
